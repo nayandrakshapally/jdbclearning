@@ -34,7 +34,8 @@ public class Main {
             e.printStackTrace();
         } finally {
             try {
-                JdbcUtility.closeConnection(connect, statement,resultSet);
+                JdbcUtility.closeConnection(connect, statement);
+                resultSet.close();
             }catch (Exception e){
                 e.printStackTrace();
             }

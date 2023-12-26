@@ -17,9 +17,9 @@ public class JdbcUtility {
         return DriverManager.getConnection(url,user,password);
     }
     //Closing the resources
-    public static void closeConnection(Connection connect, Statement statement, ResultSet resultSet) throws SQLException{
+    public static void closeConnection(Connection connect, Statement statement) throws SQLException{
         connect.close();
         statement.close();
-        resultSet.close();
+//        resultSet.close();
     }
 }
